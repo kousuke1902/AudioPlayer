@@ -1,4 +1,4 @@
-﻿# include <Siv3D.hpp> // OpenSiv3D v0.6.6
+﻿# include <Siv3D.hpp> // OpenSiv3D v0.6.15
 
 
 //音声ファイル判定

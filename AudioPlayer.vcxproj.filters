@@ -732,6 +732,39 @@
     <None Include="App\engine\font\min\siv3d-min.woff">
       <Filter>Resource Files\engine\font\min</Filter>
     </None>
+    <None Include="App\example\shader\glsl\default3d_forward_shadow_depth.frag">
+      <Filter>Resource Files\example\shader\glsl</Filter>
+    </None>
+    <None Include="App\example\shader\glsl\default3d_forward_shadow_shading.frag">
+      <Filter>Resource Files\example\shader\glsl</Filter>
+    </None>
+    <None Include="App\example\shader\hlsl\default3d_forward_shadow.hlsl">
+      <Filter>Resource Files\example\shader\hlsl</Filter>
+    </None>
+    <None Include="App\engine\shader\d3d11\quad_warp.ps">
+      <Filter>Resource Files\engine\shader\d3d11</Filter>
+    </None>
+    <None Include="App\engine\shader\d3d11\quad_warp.vs">
+      <Filter>Resource Files\engine\shader\d3d11</Filter>
+    </None>
+    <None Include="App\engine\shader\d3d11\gaussian_blur_5.ps">
+      <Filter>Resource Files\engine\shader\d3d11</Filter>
+    </None>
+    <None Include="App\engine\shader\d3d11\gaussian_blur_13.ps">
+      <Filter>Resource Files\engine\shader\d3d11</Filter>
+    </None>
+    <None Include="App\engine\shader\glsl\quad_warp.vert">
+      <Filter>Resource Files\engine\shader\glsl</Filter>
+    </None>
+    <None Include="App\engine\shader\glsl\gaussian_blur_5.frag">
+      <Filter>Resource Files\engine\shader\glsl</Filter>
+    </None>
+    <None Include="App\engine\shader\glsl\gaussian_blur_13.frag">
+      <Filter>Resource Files\engine\shader\glsl</Filter>
+    </None>
+    <None Include="App\engine\shader\glsl\quad_warp.frag">
+      <Filter>Resource Files\engine\shader\glsl</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Media Include="App\example\test.mp3">

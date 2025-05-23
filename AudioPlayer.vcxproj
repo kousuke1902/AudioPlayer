@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{039a20e7-98a8-4cf3-90d6-743abdef6974}</ProjectGuid>
+    <ProjectGuid>{2440759b-acb0-4a59-96a2-5bc185cad948}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>AudioPlayer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -49,23 +49,23 @@
     <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\Debug\Intermediate\</IntDir>
     <TargetName>$(ProjectName)(debug)</TargetName>
     <LocalDebuggerWorkingDirectory>$(ProjectDir)App</LocalDebuggerWorkingDirectory>
-    <IncludePath>$(SIV3D_0_6_6)\include;$(SIV3D_0_6_6)\include\ThirdParty;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SIV3D_0_6_6)\lib\Windows;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SIV3D_0_6_15)\include;$(SIV3D_0_6_15)\include\ThirdParty;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SIV3D_0_6_15)\lib\Windows;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Intermediate\$(ProjectName)\Release\</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\Release\Intermediate\</IntDir>
     <LocalDebuggerWorkingDirectory>$(ProjectDir)App</LocalDebuggerWorkingDirectory>
-    <IncludePath>$(SIV3D_0_6_6)\include;$(SIV3D_0_6_6)\include\ThirdParty;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SIV3D_0_6_6)\lib\Windows;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SIV3D_0_6_15)\include;$(SIV3D_0_6_15)\include\ThirdParty;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SIV3D_0_6_15)\lib\Windows;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_ENABLE_EXTENDED_ALIGNED_STORAGE;_SILENCE_CXX20_CISO646_REMOVED_WARNING;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_ENABLE_EXTENDED_ALIGNED_STORAGE;_SILENCE_CXX20_CISO646_REMOVED_WARNING;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -74,6 +74,7 @@
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <BuildStlModules>false</BuildStlModules>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -91,7 +92,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_ENABLE_EXTENDED_ALIGNED_STORAGE;_SILENCE_CXX20_CISO646_REMOVED_WARNING;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_ENABLE_EXTENDED_ALIGNED_STORAGE;_SILENCE_CXX20_CISO646_REMOVED_WARNING;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;_SILENCE_ALL_MS_EXT_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -100,6 +101,7 @@
       <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <BuildStlModules>false</BuildStlModules>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -196,6 +198,8 @@
     <None Include="App\engine\shader\d3d11\forward3d.vs" />
     <None Include="App\engine\shader\d3d11\fullscreen_triangle.ps" />
     <None Include="App\engine\shader\d3d11\fullscreen_triangle.vs" />
+    <None Include="App\engine\shader\d3d11\gaussian_blur_13.ps" />
+    <None Include="App\engine\shader\d3d11\gaussian_blur_5.ps" />
     <None Include="App\engine\shader\d3d11\gaussian_blur_9.ps" />
     <None Include="App\engine\shader\d3d11\line3d.ps" />
     <None Include="App\engine\shader\d3d11\line3d.vs" />
@@ -204,6 +208,8 @@
     <None Include="App\engine\shader\d3d11\msdffont_outlineshadow.ps" />
     <None Include="App\engine\shader\d3d11\msdffont_shadow.ps" />
     <None Include="App\engine\shader\d3d11\msdfprint.ps" />
+    <None Include="App\engine\shader\d3d11\quad_warp.ps" />
+    <None Include="App\engine\shader\d3d11\quad_warp.vs" />
     <None Include="App\engine\shader\d3d11\round_dot.ps" />
     <None Include="App\engine\shader\d3d11\sdffont.ps" />
     <None Include="App\engine\shader\d3d11\sdffont_outline.ps" />
@@ -221,6 +227,8 @@
     <None Include="App\engine\shader\glsl\forward3d.vert" />
     <None Include="App\engine\shader\glsl\fullscreen_triangle.frag" />
     <None Include="App\engine\shader\glsl\fullscreen_triangle.vert" />
+    <None Include="App\engine\shader\glsl\gaussian_blur_13.frag" />
+    <None Include="App\engine\shader\glsl\gaussian_blur_5.frag" />
     <None Include="App\engine\shader\glsl\gaussian_blur_9.frag" />
     <None Include="App\engine\shader\glsl\line3d.frag" />
     <None Include="App\engine\shader\glsl\line3d.vert" />
@@ -229,6 +237,8 @@
     <None Include="App\engine\shader\glsl\msdffont_outlineshadow.frag" />
     <None Include="App\engine\shader\glsl\msdffont_shadow.frag" />
     <None Include="App\engine\shader\glsl\msdfprint.frag" />
+    <None Include="App\engine\shader\glsl\quad_warp.frag" />
+    <None Include="App\engine\shader\glsl\quad_warp.vert" />
     <None Include="App\engine\shader\glsl\round_dot.frag" />
     <None Include="App\engine\shader\glsl\sdffont.frag" />
     <None Include="App\engine\shader\glsl\sdffont_outline.frag" />
@@ -271,6 +281,8 @@
     <None Include="App\example\shader\glsl\default2d_texture.frag" />
     <None Include="App\example\shader\glsl\default3d_forward.frag" />
     <None Include="App\example\shader\glsl\default3d_forward.vert" />
+    <None Include="App\example\shader\glsl\default3d_forward_shadow_depth.frag" />
+    <None Include="App\example\shader\glsl\default3d_forward_shadow_shading.frag" />
     <None Include="App\example\shader\glsl\extract_bright_linear.frag" />
     <None Include="App\example\shader\glsl\forward_fog.frag" />
     <None Include="App\example\shader\glsl\forward_triplanar.frag" />
@@ -346,6 +358,9 @@
       <FileType>Document</FileType>
     </None>
     <None Include="App\example\shader\hlsl\default3d_forward.hlsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="App\example\shader\hlsl\default3d_forward_shadow.hlsl">
       <FileType>Document</FileType>
     </None>
     <None Include="App\example\shader\hlsl\extract_bright_linear.hlsl">
