@@ -16,8 +16,11 @@ bool IsAllAudio(const FilePath& path)
 
 void Main()
 {
+	// ライセンス
+	LicenseManager::AddLicense({ .title = U"Programer", .copyright = U"(C)kousuke1902", .text = U"He made this Audio Player" });
+
 	//ウィンドウ名
-	Window::SetTitle(U"Light Audio Player ver.1.0.0");
+	Window::SetTitle(U"Remember Audio Player ver.1.0.0");
 	// 背景の色を設定 | Set background color
 	Scene::SetBackground(Palette::Midnightblue);
 
